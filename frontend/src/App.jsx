@@ -4,8 +4,7 @@ import RoleManager from './components/RoleManager';
 import CarrierCompliance from './components/CarrierCompliance';
 import AuditLog from './components/AuditLog';
 
-const API_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = "https://lordflow-1.onrender.com";
 
 export default function App() {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
