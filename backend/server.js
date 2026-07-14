@@ -8,6 +8,12 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "LoadFlow Backend is running"
+  });
+});
+
 const logAuditEvent = async (loadId, orgId, userId, action, details) => {
   const logId = crypto.randomUUID();
   const timestamp = new Date().toISOString();
